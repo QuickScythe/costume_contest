@@ -10,8 +10,6 @@ public final class CostumeContest extends JavaPlugin {
         // Plugin startup logic
         Utils.init(this);
 
-        Utils.getLogger().log("CostumeContest enabled.");
-
     }
 
     @Override

@@ -1,11 +1,9 @@
+
+
 plugins {
     id 'java'
     id 'maven-publish'
 }
-
-group = 'com.github.QuickScythe'
-version = '0.1.2-SNAPSHOT'
-
 repositories {
 
     mavenCentral()
@@ -22,7 +20,7 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
-    implementation 'com.github.QuickScythe:shadow_utils:0.1.9-SNAPSHOT'
+    implementation "com.github.QuickScythe:shadow_utils:${project.shadow_utils_version}"
 }
 
 def targetJavaVersion = 21

@@ -1,6 +1,7 @@
 package me.quickscythe.shadowcore.utils;
 
 import me.quickscythe.shadowcore.CostumeContest;
+import me.quickscythe.shadowcore.utils.chat.Logger;
 
 public class Utils {
 
