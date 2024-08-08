@@ -2,4 +2,9 @@ name: CostumeContest
 version: '${version}'
 main: me.quickscythe.shadowcore.CostumeContest
 api-version: '1.21'
-depend: [ShadowUtils]
+dependencies:
+  server:
+    ShadowUtils:
+      load: BEFORE
+      required: true
+      join-classpath: true
