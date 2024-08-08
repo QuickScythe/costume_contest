@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.github.QuickScythe'
-version = '0.1.1-SNAPSHOT'
+version = '0.1.2-SNAPSHOT'
 
 repositories {
 
@@ -22,7 +22,7 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
-    implementation 'com.github.QuickScythe:shadow_utils:0.1.8-SNAPSHOT'
+    implementation 'com.github.QuickScythe:shadow_utils:0.1.9-SNAPSHOT'
 }
 
 def targetJavaVersion = 21
