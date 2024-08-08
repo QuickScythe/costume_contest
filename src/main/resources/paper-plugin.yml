@@ -1,4 +1,5 @@
-name: costume_contest
+name: CostumeContest
 version: '${version}'
 main: me.quickscythe.shadowcore.CostumeContest
 api-version: '1.21'
+depend: [ShadowUtils]
