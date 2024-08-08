@@ -1,4 +1,4 @@
 name: costume_contest
-version: '0.1.0-SNAPSHOT'
-main: me.quickscythe.shadowcore.Costume_contest
+version: '${version}'
+main: me.quickscythe.shadowcore.CostumeContest
 api-version: '1.21'
