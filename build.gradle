@@ -1,12 +1,15 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
-group = 'me.quickscythe'
-version = '0.1.0-SNAPSHOT'
+group = 'com.github.QuickScythe'
+version = '0.1.1-SNAPSHOT'
 
 repositories {
+
     mavenCentral()
+    maven { url "https://jitpack.io" }
     maven {
         name = "papermc-repo"
         url = "https://repo.papermc.io/repository/maven-public/"
@@ -19,10 +22,13 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
+    implementation 'com.github.QuickScythe:shadow_utils:0.1.8-SNAPSHOT'
 }
 
 def targetJavaVersion = 21
 java {
+    withSourcesJar()
+    withJavadocJar()
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
     targetCompatibility = javaVersion
@@ -40,10 +46,17 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 processResources {
-    def props = [version: version]
+    def props = [version: version,group: rootProject.group]
     inputs.properties props
     filteringCharset 'UTF-8'
     filesMatching('paper-plugin.yml') {
         expand props
+    }
+}
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
     }
 }
