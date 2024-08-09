@@ -5,6 +5,9 @@ import me.quickscythe.shadowcore.utils.chat.Logger;
 import me.quickscythe.shadowcore.utils.heartbeat.Flutter;
 import me.quickscythe.shadowcore.utils.heartbeat.HeartbeatUtils;
 import me.quickscythe.shadowcore.utils.heartbeat.runnable.Heartbeat;
+import me.quickscythe.shadowcore.utils.team.Team;
+import me.quickscythe.shadowcore.utils.team.TeamManager;
+import net.kyori.adventure.text.format.NamedTextColor;
 
 public class Utils {
 
@@ -14,11 +17,9 @@ public class Utils {
     public static void init(CostumeContest plugin){
         Utils.plugin = plugin;
         logger = new Logger(plugin);
+        Team team = TeamManager.registerTeam("red");
+        team.setColor(NamedTextColor.AQUA);
 
-        HeartbeatUtils.getHeartbeat().addFlutter(()->{
-            plugin.onDisable();
-            return false;
-        });
     }
 
     public static CostumeContest getPlugin(){
