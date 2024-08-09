@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ContestCommand implements ShadowCommand{
     @Override
-    public void execute(@NotNull CommandSourceStack commandSourceStack, @NotNull String[] strings) {
+    public void execute(@NotNull CommandSourceStack stack, @NotNull String[] strings) {
 
     }
 }
